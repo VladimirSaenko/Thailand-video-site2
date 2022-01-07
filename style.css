@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background: #111;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header .logo {
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+header .toggle {
+    max-width: 60px;
+    cursor: pointer;
+}
+
+header .toggle img {
+    max-width: 100%;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* flex-direction: column; */
+    position: relative;
+    padding: 0 100px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* .banner::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.5);
+} */
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.banner .textBox {
+    position: relative;
+    max-width: 550px;
+    z-index: 2;
+}
+
+.banner .textBox h2 {
+    color: #fff;
+    font-size: 3em;
+}
+
+.banner .textBox p {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 5px 0 25px;
+}
+
+.banner .textBox a {
+    display: inline-block;
+    position: relative;
+    font-size: 2em;
+    color: #111;
+    background-color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.banner .videoBox {
+    position: relative;
+    background: #fff;
+    /* background: url(); */
+    width: 100%;
+    margin-left: 40px;
+    height: 400px;
+    z-index: 1;
+}
+
+.banner .videoBox video {
+    opacity: 1;
+}
+
+.banner .sci {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.banner .sci li {
+    list-style: none;
+}
+
+.banner .sci li a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.banner .sci li a img {
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px)  {
+    header {
+        padding: 20px 50px;
+    }
+
+    body {
+        background: dimgray;
+    }
+
+    .banner {
+        padding: 150px 50px 0;
+        flex-direction: column;
+    }
+
+    /* .banner::before {
+        display: none;
+    } */
+
+    .banner .textBox {
+        max-width: 100%;
+    }
+
+    .banner .textBox h2 {
+        font-size: 3.5em;
+    }
+
+    .banner .videoBox {
+        width: 100%;
+        height: 200px;
+        margin: 40px 0 100px;
+    }
+
+    .banner .videoBox video {
+        border: black 5px solid;
+    }
+
+    .banner .sci {
+        left: 50px;
+    }
+}
